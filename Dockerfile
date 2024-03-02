@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:20.11.1-slim
+FROM node:alpine
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
@@ -8,8 +8,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies
-#RUN npm config set registry https://registry.npmjs.org/
-
 RUN npm install
 
 # Bundle app source
